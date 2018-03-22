@@ -97,9 +97,9 @@
 (use-package ivy
   :ensure t
   :diminish ivy-mode
+  :bind ("C-c C-r" . ivy-resume)
   :config
-  (ivy-mode 1)
-  (bind-key "C-c C-r" 'ivy-resume))
+  (ivy-mode 1))
 
 
 (use-package counsel
