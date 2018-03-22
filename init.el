@@ -9,7 +9,6 @@
     ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
-(require 'bind-key)
 
 ;; use-package
 (unless (package-installed-p 'use-package)
@@ -17,7 +16,8 @@
   (package-install 'use-package))
 (eval-when-compile
   (require 'use-package))
-
+(require 'bind-key)
+(require 'diminish)
 ;; Turn off mouse interface early in startup to avoid momentary display
 (when (fboundp 'menu-bar-mode) (menu-bar-mode 0))
 (when (fboundp 'tool-bar-mode) (tool-bar-mode 0))
@@ -87,8 +87,6 @@
   :ensure t
   :bind (("C-x g" . magit-status)))
 
-(use-package diminish
-  :ensure t)
 
 (use-package swiper
   :ensure t
