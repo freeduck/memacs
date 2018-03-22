@@ -70,6 +70,7 @@
 
 
 (use-package recentf
+  :ensure t
   :config
   (setq recentf-save-file (expand-file-name "recentf" kristian-savefile-dir)
         recentf-max-saved-items 500
